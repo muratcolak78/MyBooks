@@ -1,0 +1,354 @@
+/* BookDetails.css */
+.book-details-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Loading ve Error Stilleri */
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.error-state {
+    color: #ff6b6b;
+}
+
+/* Ana Grid Layout - Daha geniş sağ sütun */
+.book-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    /* Sağ sütunu genişlettik */
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+/* Sol Taraf - Kitap Bilgileri */
+.book-info-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.book-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.book-author {
+    font-size: 1.4rem;
+    color: #e74c3c;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.book-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-value {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Rating Bölümü */
+.rating-section {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+.rating-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 1.8rem;
+    color: #ffd700;
+}
+
+.rating-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Açıklama Bölümü */
+.description-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.book-description {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+/* Sağ Taraf - Kitap Kapağı (BÜYÜK) */
+.book-cover-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 30px;
+}
+
+.book-cover-large {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 8px solid white;
+}
+
+.cover-image {
+    width: 100%;
+    max-width: 400px;
+    /* Daha geniş */
+    height: 550px;
+    /* Daha yüksek */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid #f8f9fa;
+}
+
+.cover-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.no-cover-large {
+    width: 400px;
+    height: 550px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    font-style: italic;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Yorumlar Bölümü */
+.comments-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.comments-placeholder {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f8c8d;
+}
+
+.comments-placeholder h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.comment-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* ISBN için özel stil */
+.isbn-value {
+    font-family: 'Courier New', monospace;
+    background: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* Kitap kapağı için ek efektler */
+.cover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cover-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.cover-container:hover::before {
+    opacity: 0.5;
+    transform: translate(5px, 5px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .book-details-grid {
+        grid-template-columns: 1fr 450px;
+        gap: 40px;
+    }
+
+    .cover-image {
+        max-width: 350px;
+        height: 500px;
+    }
+
+    .no-cover-large {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 968px) {
+    .book-details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .book-cover-section {
+        order: -1;
+        position: static;
+    }
+
+    .book-cover-large {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .cover-image {
+        max-width: 100%;
+        height: 500px;
+    }
+
+    .no-cover-large {
+        width: 100%;
+        max-width: 400px;
+        height: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-details-container {
+        padding: 20px 15px;
+    }
+
+    .book-info-section,
+    .book-cover-large,
+    .comments-section {
+        padding: 25px;
+    }
+
+    .book-title {
+        font-size: 2.2rem;
+    }
+
+    .book-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-image {
+        height: 450px;
+    }
+
+    .no-cover-large {
+        height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-title {
+        font-size: 1.8rem;
+    }
+
+    .cover-image,
+    .no-cover-large {
+        height: 400px;
+    }
+
+    .book-cover-large {
+        padding: 20px;
+    }
+}

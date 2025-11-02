@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yorum Analizi</title>
+</head>
+
+<body>
+    <h2>Buchbesprechung schreiben</h2>
+    <form id="commentForm">
+        <textarea id="commentText" rows="4" cols="50" placeholder="Hinterlassen Sie einen Kommentar..."></textarea><br><br>
+        <button type="submit">Senden</button>
+    </form>
+
+    <h3>Ergebnis der Analyse:</h3>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const text = document.getElementById('commentText').value;
+
+            const response = await fetch('http://localhost:3000/api/comments/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text })
+            });
+
+            const data = await response.json();
+            document.getElementById('result').innerText = `Emotionen: ${data.sentiment}, Vertrauen: ${data.score.toFixed(2)}`;
+        });
+    </script>
+</body>
+
+</html>

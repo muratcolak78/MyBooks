@@ -1,0 +1,155 @@
+/* App.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Üst Header */
+.header {
+    grid-area: header;
+    background-color: #1e1e2f;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+/* Sol Menü */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #2c2c3e;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Linkler */
+.nav {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav:hover {
+    background-color: #3a3a52;
+}
+
+.nav.active {
+    background-color: #4a4a6a;
+}
+
+/* Ana İçerik - TAM EKRAN */
+.main {
+    grid-area: main;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    /* Gradient background */
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container */
+.form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.adduser {
+    display: flex;
+    flex-direction: column;
+}
+
+.adduser input {
+    margin-bottom: 16px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.adduser input:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+.adduser button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.adduser button:hover {
+    background-color: #005fa3;
+}
+
+.adduser p {
+    text-align: center;
+    margin: 15px 0;
+    color: #333;
+}
+
+.adduser a {
+    text-align: center;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.adduser a:hover {
+    text-decoration: underline;
+}
+
+/* Home sayfası için */
+.home-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 2rem;
+    flex-direction: column;
+}

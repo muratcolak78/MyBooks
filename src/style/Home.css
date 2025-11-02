@@ -1,0 +1,57 @@
+/* Home Container */
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.home-container>div {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.home-container>div>p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Books Grid - FLEX ile yan yana dizilim */
+.books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .books-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .books-grid {
+        gap: 15px;
+    }
+
+    .home-container h1 {
+        font-size: 2rem;
+    }
+
+    .home-container>div>p {
+        font-size: 1rem;
+    }
+}
